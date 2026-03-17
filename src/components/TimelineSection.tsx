@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactElement } from "react";
 import { useMemo } from "react";
 import styles from "../app/page.module.css";
 import { RevealSection } from "./RevealSection";
@@ -10,7 +11,7 @@ type EventItem = {
   icon: "ring" | "glass" | "dinner" | "dance" | "party" | "close";
 };
 
-const ICONS: Record<EventItem["icon"], JSX.Element> = {
+const ICONS: Record<EventItem["icon"], ReactElement> = {
   ring: (
     <svg viewBox="0 0 24 24" aria-hidden>
       <path d="M12 2a5 5 0 0 0-5 5c0 1.8 1 3.6 2.6 4.6L12 14l2.4-2.4C16 10.6 17 8.8 17 7a5 5 0 0 0-5-5zm0 7.5A2.5 2.5 0 1 1 12 4a2.5 2.5 0 0 1 0 5.5z" fill="currentColor" />
